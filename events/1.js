@@ -128,3 +128,117 @@
 //     }
 //   });
 // });
+
+// mouseover
+// mouseover mtlb jiske upar mouse ayega
+// let a = document.querySelector("#abcd");
+// a.addEventListener("mouseover", function () {
+//   a.style.backgroundColor = "yellow";
+// });
+
+// mouseout
+// let b = document.querySelector("#abcd");
+// b.addEventListener("mouseout", function () {
+//   b.style.backgroundColor = "red";
+// });
+
+// mousemove
+// hame apne div ko move krwana hai
+// x mei kitna move krwana hai jitni bhi dets.clientX ki value hai
+// y mei kitna move krwana hai jitni bhi dets.clientY ki value hai
+// top to bottom y axis
+// left to right x axis
+// let a = document.querySelector("#abcd");
+// window.addEventListener("mousemove", function (dets) {
+//   a.style.top = dets.clientY + "px";
+//   a.style.left = dets.clientX + "px";
+// });
+
+// keyup
+// let i = document.querySelector("#i");
+// let o = document.querySelector("#o");
+
+// i.addEventListener("keyup", function () {
+//   o.textContent = i.value;
+// });
+
+// Event object: target, type, preventDefault
+// here event is event object humn dets likha tha pehla
+// let a = document.querySelector("#abcd");
+// a.addEventListener("click", function (event) {
+//   console.log(event);
+// });
+// target woh hota hai jispe event raise hua hota hai
+// type btata hai ki konsa event listener lagaya hai
+
+// Event Bubbling
+// event jaha pr bhi occur hota hai agr us element ke paas event listener nhi hua toh hamara event uske parent par listener dhundega aur aisa krte krte upr ki trf move krega
+// aap kisi pe bhi event ko chalaoge... aapka listener chlega aur event jump krega parent pe
+// document.querySelector("#nav").addEventListener("click", function () {
+//   alert("clicked");
+// });
+
+// let ul = document.querySelector("ul");
+
+// ul.addEventListener("click", function (event) {
+//   event.target.style.textDecoration = "line-through";
+// });
+
+// toggle
+// ul.addEventListener("click", function (event) {
+//   event.target.classList.toggle("lt");
+// });
+
+// Event Capturing
+// aapne jaha pe bhi kisi event ko occur kia pattern upr se niche ki trf ayega
+// jab bhi aap click krte ho ya event raise krte ho toh aapka jo event flow (also called propagation) hai woh 2 phases mei chlta hai
+// phase 1: event top level element se neeche ki trf aayega
+// phase 2: event raised element se parent ki trf jayega
+// aur pehle phase 1 hoti hai
+
+// capture phase
+// hmesha phase 1 hi pehle hoti hai par vo by default off rehti hai agr hum usey on kr de toh pehle phase 1 ka answer milega
+
+// pehle capture phase chlta hai fir bubbling phase chlta hai ab kyuki bubbling phase jo hai woh by default activate hota hai toh woh chl jaata hai.. capture phase on nhi hota toh woh nhi chlta... capture phase ko on krta pdta hai kisi bhi listener ke last mei }, true likhdo
+// let a = document.querySelector(".a");
+// let b = document.querySelector(".b");
+// let c = document.querySelector(".c");
+// let btn = document.querySelector("button");
+
+// btn.addEventListener("click", function () {
+//   console.log("button clicked");
+// });
+
+// c.addEventListener("click", function () {
+//   console.log("c clicked");
+// });
+
+// b.addEventListener("click", function () {
+//   console.log("b clicked");
+// });
+
+// a.addEventListener(
+//   "click",
+//   function () {
+//     console.log("a clicked");
+//   },
+//   true,
+// ); // capture phase on kia hai true se
+
+//Live character counter
+// let inp = document.querySelector("input");
+// let span = document.querySelector("span");
+// inp.addEventListener("input", function () {
+//   // console.log(inp.value.length);
+//   span.textContent = inp.value.length;
+// });
+
+// inp.addEventListener("input", function () {
+//   let left = 20 - inp.value.length;
+//   span.textContent = left;
+//   if (left < 0) {
+//     span.style.color = "red";
+//   } else {
+//     span.style.color = "white";
+//   }
+// });
