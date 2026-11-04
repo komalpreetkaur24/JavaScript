@@ -72,4 +72,60 @@ let val = new Abcd();
 // event handler - element
 // class - blank object
 
+// arrow function and lexical this
 // arrow function hmesha apni this ki value parent se lete hai
+
+// manual binding: call, apply, bind
+// function ko call krte wqt we can set ki uski this ki value kya hogi
+
+// let obj = {
+//   naam: "Preet",
+//   age: 24,
+// };
+
+// function abcd() {
+//   console.log(this); // now here this is obj
+//   console.log(this.name);
+//   console.log(this.age);
+// }
+
+// abcd.call(obj); // this ki value obj set krdi
+
+// let obj = {
+//   naam: "Preet",
+//   age: 24,
+// };
+
+// function abcd(a, b, c) {
+//   console.log(this, a, b, c);
+// }
+
+// abcd.call(obj, 1, 2, 3);
+
+// apply mei array paas krna pdta hai if values are more than 2
+// rarely use krte hai apply ko
+// let obj = {
+//   naam: "Preet",
+//   age: 24,
+// };
+
+// function abcd(a, b, c) {
+//   console.log(this, a, b, c);
+// }
+
+// abcd.apply(obj, [1, 2, 3]);
+
+// bind
+// yeh function ki new copy bana deta hai
+
+// let obj = {
+//   naam: "Preet",
+//   age: 24,
+// };
+
+// function abcd(a, b, c) {
+//   console.log(this, a, b, c);
+// }
+
+// let fnc = abcd.bind(obj, 1, 2, 3);
+// fnc();
